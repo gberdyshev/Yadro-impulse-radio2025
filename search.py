@@ -1,4 +1,4 @@
-import sys
+from dotenv import dotenv
 
 def main():
     if len(sys.argv) != 3:
