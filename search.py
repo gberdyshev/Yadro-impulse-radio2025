@@ -1,12 +1,14 @@
-from dotenv import dotenv
+import os
+from dotenv import load_dotenv
 
 def main():
-    if len(sys.argv) != 3:
-        print("Введите аргументы в формате <имя_файла> <слово_для_поиска>")
+    load_dotenv()
+    if os.getenv("FILENAME") is None or os.getenv("WORD") is None:
+        print("Задайте переменные окружения FILENAME и WORD!")
         return 0
 
-    filepath = sys.argv[1]
-    word = sys.argv[2]
+    filepath = os.getenv("FILENAME")
+    word = os.getenv("WORD")
 
     f = open(filepath).readlines()
 
