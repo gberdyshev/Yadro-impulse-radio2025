@@ -1,7 +1,7 @@
 FROM python:latest
 
-COPY search.py config.txt req.txt /tmp/
+COPY search.py config.txt req.txt .
 
-RUN pip3 install -r /tmp/req.txt
+RUN pip3 install -r req.txt
 
-CMD ["python3", "/tmp/search.py"]
+CMD ["python3", "./search.py"]
