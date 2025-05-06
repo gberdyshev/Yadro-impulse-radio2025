@@ -20,5 +20,13 @@ docker run -d --env-file .env task
 ```bash
 docker run -e FILENAME=config.txt -e WORD=path task
 ```
-
 Путь до файла ``config.txt`` указывается относительно ФС в Docker!
+
+
+## Пример вывода
+
+```bash
+path: /home/user/data
+log path: /var/log/app
+```
+
